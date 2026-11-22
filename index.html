@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ToolBox BD – বিনামূল্যে অনলাইন টুলস (বয়স ক্যালকুলেটর, ওয়ার্ড কাউন্টার, শতকরা হিসাব)</title>
+<meta name="description" content="বয়স ক্যালকুলেটর, ওয়ার্ড কাউন্টার ও শতকরা হিসাবের বিনামূল্যে বাংলা অনলাইন টুলস।">
+<!-- Monetag/Adsterra verification meta tag থাকলে এখানে বসান -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500;700;800&family=Baloo+Da+2:wght@700;800&family=Hind+Siliguri:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef0fb;--card:#fff;--ink:#16204f;--muted:#5d668f;--line:#dadff2;--brand:#2b3bd1;--brand-d:#1f2cab;--accent:#d7f46a;--on-brand:#fff;--shadow:0 1px 0 var(--line),0 10px 24px -14px rgba(31,44,171,.35)}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1230;--card:#171d47;--ink:#eceffd;--muted:#a3abd6;--line:#2a3270;--brand:#8e9bff;--brand-d:#b4bdff;--accent:#d7f46a;--on-brand:#0e1230;--shadow:0 1px 0 var(--line)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Hind Siliguri',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:17px}
+h1,h2,.logo,.cards strong{font-family:'Baloo Da 2','Hind Siliguri',sans-serif;line-height:1.3}
+a{color:var(--brand)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:20;background:var(--card);box-shadow:0 1px 0 var(--line)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 20px;padding:10px 0}
+.logo{font-size:1.55rem;font-weight:800;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{font-style:normal;display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--brand);color:var(--on-brand);font-size:1.05rem;transform:rotate(-6deg)}
+nav{display:flex;gap:4px;overflow-x:auto;max-width:100%;padding:2px 0}
+nav a{white-space:nowrap;padding:6px 14px;border-radius:99px;text-decoration:none;font-weight:500;color:var(--ink)}
+nav a:hover{background:var(--bg)}
+nav a.on{background:var(--ink);color:var(--card)}
+.hero{margin:22px 0 4px;padding:34px 28px;border-radius:22px;background:var(--brand);color:var(--on-brand);position:relative;overflow:hidden}
+.hero h1{font-size:clamp(1.9rem,5vw,3rem);margin:0 0 8px;font-weight:800;max-width:15ch}
+.hero p{margin:0 0 18px;max-width:46ch;opacity:.92}
+.hero .chips{display:flex;flex-wrap:wrap;gap:8px}
+.hero .chips a{background:var(--accent);color:#16204f;text-decoration:none;font-weight:700;padding:7px 16px;border-radius:99px}
+.hero .chips a:hover{filter:brightness(.95)}
+.hero::after{content:"৳ % ÷ ×";position:absolute;right:-8px;bottom:-26px;font-family:'Baloo Da 2',sans-serif;font-weight:800;font-size:6.5rem;letter-spacing:.1em;opacity:.12;white-space:nowrap;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:22px;padding:22px 0 8px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.hero{padding:26px 20px}}
+main{background:var(--card);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+aside .box{background:var(--card);border-radius:18px;padding:18px;margin-bottom:18px;box-shadow:var(--shadow)}
+aside .box a{display:block;padding:5px 0;text-decoration:none;font-weight:500}
+aside .box strong{font-family:'Baloo Da 2',sans-serif;font-size:1.1rem}
+h1{font-size:1.9rem;margin:0 0 4px;font-weight:800}
+h2{font-size:1.25rem;margin:26px 0 6px;font-weight:700}
+p.lead{color:var(--muted);margin:0 0 18px}
+label{display:block;font-weight:500;margin:14px 0 5px}
+input,textarea{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:12px;font:inherit;background:var(--bg);color:var(--ink);transition:border-color .15s}
+input:focus,textarea:focus{border-color:var(--brand);outline:none}
+button:focus-visible,a:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+textarea{min-height:180px;resize:vertical}
+button{margin-top:16px;padding:12px 26px;border:0;border-radius:12px;background:var(--brand);color:var(--on-brand);font:inherit;font-weight:700;cursor:pointer;transition:transform .1s}
+button:hover{background:var(--brand-d)}button:active{transform:scale(.97)}
+.res{margin-top:18px;padding:16px 18px;border-radius:14px;background:var(--accent);color:#16204f;font-size:1.15rem}
+.res b{font-size:1.35rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-top:14px}
+.stats div{background:var(--bg);border-radius:14px;padding:12px;text-align:center;color:var(--muted)}
+.stats b{display:block;font-family:'Baloo Da 2',sans-serif;font-size:1.9rem;line-height:1.2;color:var(--brand)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:6px}
+.cards a{display:block;padding:18px;border-radius:16px;text-decoration:none;color:var(--ink);background:var(--t,var(--bg));transition:transform .15s}
+.cards a:hover{transform:translateY(-3px)}
+.cards em{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:var(--card);font-style:normal;font-family:'Baloo Da 2',sans-serif;font-weight:800;font-size:1.15rem;margin-bottom:10px;color:#16204f}
+.cards strong{display:block;font-size:1.1rem}
+.cards span{font-size:.92rem;opacity:.8;display:block;line-height:1.5}
+.t1{--t:#ffe3d6}.t2{--t:#d9f2e6}.t3{--t:#e3e0ff}.t4{--t:#fff1b8}.t5{--t:#d6ecff}.t6{--t:#f6dcf5}
+@media(prefers-color-scheme:dark){.t1,.t2,.t3,.t4,.t5,.t6{--t:#1f2757}.cards a{border:1px solid var(--line)}.cards em{background:var(--accent)}}
+.ad{margin:18px auto;text-align:center;min-height:50px;font-size:.75rem;color:var(--muted)}
+.ad:empty::before{content:"বিজ্ঞাপন";display:block;border:2px dashed var(--line);padding:18px;border-radius:14px}
+section.page p{max-width:68ch}
+footer{text-align:center;color:var(--muted);padding:26px 16px 34px;font-size:.92rem}
+footer a{margin:0 10px}
+.page{display:none}.page.show{display:block}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.num,.res b,.stats b,input[type=number],input[type=date]{font-family:'Anek Bangla','Hind Siliguri',sans-serif;font-feature-settings:"tnum"}
+.res b,.stats b{font-weight:800;letter-spacing:.01em}
+.res b{font-size:1.5rem}
+select{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:12px;font:inherit;background:var(--bg);color:var(--ink)}
+select:focus{border-color:var(--brand);outline:none}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+.t7{--t:#ffd9e4}.t8{--t:#d8f5f0}.t9{--t:#fde9c9}.t10{--t:#e6efc4}.t11{--t:#dde4ff}
+@media(prefers-color-scheme:dark){.t7,.t8,.t9,.t10,.t11{--t:#1f2757}}
+.dl-box{display:block;text-align:center;padding:16px;border-radius:16px;background:var(--accent);color:#16204f;text-decoration:none;font-weight:700}
+.dl-box small{display:block;font-weight:400;opacity:.75;font-size:.78rem}
+.dl-box:hover{filter:brightness(.96)}
+.dl-wide{margin-top:20px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="#home"><i>৳</i>ToolBox BD</a>
+  <nav aria-label="প্রধান মেনু">
+    <a href="#age">বয়স</a><a href="#words">ওয়ার্ড কাউন্টার</a><a href="#percent">শতকরা</a><a href="#emi">EMI</a><a href="#bmi">BMI</a><a href="#discount">ছাড়</a><a href="#fd">সঞ্চয়</a><a href="#dates">তারিখ</a><a href="#unit">ইউনিট</a><a href="#pass">পাসওয়ার্ড</a><a href="#guide">গাইড</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+<!-- AD SLOT 1: উপরের ব্যানার (Adsterra 728x90 / 320x50 কোড এখানে বসান) -->
+<div class="ad" id="ad-top"></div>
+
+<div class="grid">
+<main>
+
+<section class="page" id="p-home">
+  <div class="hero">
+    <h1>হিসাব-নিকাশ হোক এক ক্লিকে</h1>
+    <p>বয়স, লেখা গণনা, শতকরা, ঋণের কিস্তি আর BMI। বাংলায়, বিনামূল্যে, রেজিস্ট্রেশন ছাড়া।</p>
+    <div class="chips"><a href="#age">বয়স বের করুন</a><a href="#emi">কিস্তি হিসাব</a><a href="#bmi">BMI দেখুন</a></div>
+  </div>
+  <h2>সব টুলস</h2>
+  <div class="cards">
+    <a class="t1" href="#age"><em>বয়</em><strong>বয়স ক্যালকুলেটর</strong><span>জন্মতারিখ থেকে বছর, মাস, দিন</span></a>
+    <a class="t2" href="#words"><em>Aa</em><strong>ওয়ার্ড কাউন্টার</strong><span>শব্দ, অক্ষর ও বাক্য গণনা</span></a>
+    <a class="t3" href="#percent"><em>%</em><strong>শতকরা হিসাব</strong><span>শতকরা মান ও বৃদ্ধি-হ্রাস</span></a>
+    <a class="t4" href="#emi"><em>৳</em><strong>EMI ক্যালকুলেটর</strong><span>মাসিক কিস্তি ও মোট সুদ</span></a>
+    <a class="t5" href="#bmi"><em>kg</em><strong>BMI ক্যালকুলেটর</strong><span>উচ্চতা ও ওজন থেকে BMI</span></a>
+    <a class="t7" href="#discount"><em>%↓</em><strong>ছাড় ক্যালকুলেটর</strong><span>ডিসকাউন্টের পর দাম ও সাশ্রয়</span></a>
+    <a class="t8" href="#fd"><em>FD</em><strong>সঞ্চয় ও FDR হিসাব</strong><span>মেয়াদ শেষে কত টাকা পাবেন</span></a>
+    <a class="t9" href="#dates"><em>📅</em><strong>তারিখের ব্যবধান</strong><span>দুই তারিখের মাঝে কত দিন</span></a>
+    <a class="t10" href="#unit"><em>⇄</em><strong>ইউনিট কনভার্টার</strong><span>মণ-কেজি, ফুট-মিটার, তাপমাত্রা</span></a>
+    <a class="t11" href="#pass"><em>***</em><strong>পাসওয়ার্ড জেনারেটর</strong><span>শক্তিশালী র‍্যান্ডম পাসওয়ার্ড</span></a>
+    <a class="t6" href="#guide"><em>✎</em><strong>কাজের গাইড</strong><span>টাকা, স্বাস্থ্য ও ডিজিটাল টিপস</span></a>
+  </div>
+  <div class="dl dl-wide" hidden><a class="dl-box" href="#" target="_blank" rel="sponsored noopener">আজকের স্পনসর্ড অফার দেখুন<small>বিজ্ঞাপন</small></a></div>
+  <!-- AD SLOT 2: কনটেন্টের ভেতরে (Native Banner ভালো কাজ করে) -->
+  <div class="ad" id="ad-mid"></div>
+</section>
+
+<section class="page" id="p-age">
+  <h1>বয়স ক্যালকুলেটর</h1>
+  <p class="lead">আপনার জন্মতারিখ দিন, সঠিক বয়স জানুন।</p>
+  <label for="dob">জন্মতারিখ</label><input type="date" id="dob">
+  <button id="ageBtn">বয়স বের করুন</button>
+  <div class="res" id="ageRes" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool1"></div>
+  <h2>বয়স কীভাবে গণনা হয়?</h2>
+  <p>আজকের তারিখ থেকে জন্মতারিখ বিয়োগ করে পূর্ণ বছর, অবশিষ্ট মাস ও দিন বের করা হয়। পরবর্তী জন্মদিনের বাকি দিনও এখানে দেখানো হয়।</p>
+</section>
+
+<section class="page" id="p-words">
+  <h1>ওয়ার্ড কাউন্টার</h1>
+  <p class="lead">লেখা পেস্ট করুন, সাথে সাথে গণনা দেখুন।</p>
+  <label for="txt">আপনার লেখা</label><textarea id="txt" placeholder="এখানে লিখুন বা পেস্ট করুন..."></textarea>
+  <div class="stats">
+    <div><b id="cW">0</b>শব্দ</div><div><b id="cC">0</b>অক্ষর</div>
+    <div><b id="cS">0</b>বাক্য</div><div><b id="cP">0</b>অনুচ্ছেদ</div>
+  </div>
+  <div class="ad" id="ad-tool2"></div>
+  <h2>কোথায় কাজে লাগে?</h2>
+  <p>প্রবন্ধ, আবেদনপত্র, সোশ্যাল মিডিয়া পোস্ট ও SEO লেখার শব্দসীমা মিলিয়ে নিতে এই টুল কাজে লাগে।</p>
+</section>
+
+<section class="page" id="p-percent">
+  <h1>শতকরা হিসাব</h1>
+  <p class="lead">তিন ধরনের হিসাব এক জায়গায়।</p>
+  <h2>ক) সংখ্যার শতকরা মান</h2>
+  <label for="a1">শতকরা (%)</label><input type="number" id="a1" step="any">
+  <label for="a2">মূল সংখ্যা</label><input type="number" id="a2" step="any">
+  <button id="b1">হিসাব করুন</button><div class="res" id="r1" aria-live="polite" hidden></div>
+  <h2>খ) বৃদ্ধি বা হ্রাসের হার</h2>
+  <label for="c1">আগের মান</label><input type="number" id="c1" step="any">
+  <label for="c2">নতুন মান</label><input type="number" id="c2" step="any">
+  <button id="b2">হিসাব করুন</button><div class="res" id="r2" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool3"></div>
+</section>
+
+<section class="page" id="p-emi">
+  <h1>EMI ক্যালকুলেটর</h1>
+  <p class="lead">ঋণ নেওয়ার আগে মাসিক কিস্তি ও মোট সুদ হিসাব করে নিন।</p>
+  <label for="e1">ঋণের পরিমাণ (টাকা)</label><input type="number" id="e1" step="any">
+  <label for="e2">বার্ষিক সুদের হার (%)</label><input type="number" id="e2" step="any">
+  <label for="e3">মেয়াদ (মাস)</label><input type="number" id="e3">
+  <button id="eBtn">কিস্তি বের করুন</button>
+  <div class="res" id="eRes" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool4"></div>
+  <h2>EMI কীভাবে হিসাব হয়?</h2>
+  <p>EMI = P × r × (1+r)<sup>n</sup> ÷ ((1+r)<sup>n</sup> − 1)। এখানে P ঋণের পরিমাণ, r মাসিক সুদের হার (বার্ষিক হার ÷ ১২ ÷ ১০০) এবং n মাসের সংখ্যা। ব্যাংকের আসল কিস্তি ফি ও চার্জের কারণে সামান্য আলাদা হতে পারে।</p>
+</section>
+
+<section class="page" id="p-bmi">
+  <h1>BMI ক্যালকুলেটর</h1>
+  <p class="lead">উচ্চতা ও ওজন দিয়ে বডি মাস ইনডেক্স জানুন।</p>
+  <label for="h">উচ্চতা (সেন্টিমিটার)</label><input type="number" id="h" step="any">
+  <label for="w">ওজন (কেজি)</label><input type="number" id="w" step="any">
+  <button id="bmiBtn">BMI বের করুন</button>
+  <div class="res" id="bmiRes" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool5"></div>
+  <h2>ফলাফল কীভাবে পড়বেন?</h2>
+  <p>WHO-এর সাধারণ মান অনুযায়ী ১৮.৫-এর কম কম ওজন, ১৮.৫ থেকে ২৪.৯ স্বাভাবিক, ২৫ থেকে ২৯.৯ অতিরিক্ত ওজন, আর ৩০ বা তার বেশি স্থূলতা। দক্ষিণ এশীয়দের ক্ষেত্রে ২৩ থেকেই ঝুঁকি বাড়তে পারে। BMI শুধু একটি আনুমানিক সূচক, রোগ নির্ণয় নয়। স্বাস্থ্য নিয়ে সিদ্ধান্তের জন্য চিকিৎসকের পরামর্শ নিন।</p>
+</section>
+
+<section class="page" id="p-discount">
+  <h1>ছাড় (ডিসকাউন্ট) ক্যালকুলেটর</h1>
+  <p class="lead">দাম আর ছাড়ের হার দিন, কত টাকা বাঁচবে দেখুন।</p>
+  <div class="row"><div><label for="dpr">আসল দাম (টাকা)</label><input type="number" id="dpr" step="any"></div>
+  <div><label for="dpc">ছাড় (%)</label><input type="number" id="dpc" step="any"></div></div>
+  <button id="dBtn">হিসাব করুন</button>
+  <div class="res" id="dRes" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool6"></div>
+  <h2>কীভাবে হিসাব হয়?</h2>
+  <p>ছাড়ের পরিমাণ = দাম × ছাড়ের হার ÷ ১০০। ছাড়ের পর দাম = আসল দাম − ছাড়ের পরিমাণ। দোকানে একাধিক ছাড় থাকলে প্রতিটি ধাপ আলাদা করে হিসাব করুন।</p>
+</section>
+
+<section class="page" id="p-fd">
+  <h1>সঞ্চয় ও FDR ক্যালকুলেটর</h1>
+  <p class="lead">মেয়াদ শেষে জমানো টাকা সুদসহ কত হবে, জেনে নিন।</p>
+  <label for="fp">জমার পরিমাণ (টাকা)</label><input type="number" id="fp" step="any">
+  <div class="row"><div><label for="fr">বার্ষিক সুদ (%)</label><input type="number" id="fr" step="any"></div>
+  <div><label for="fy">মেয়াদ (বছর)</label><input type="number" id="fy" step="any"></div></div>
+  <label for="fc">সুদ যোগ হওয়ার ধরন</label>
+  <select id="fc"><option value="12">প্রতি মাসে</option><option value="4">প্রতি তিন মাসে</option><option value="1">প্রতি বছরে</option></select>
+  <button id="fBtn">হিসাব করুন</button>
+  <div class="res" id="fRes" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool7"></div>
+  <p>এটি আনুমানিক হিসাব। ব্যাংকের আসল সুদ, আয়কর ও এক্সাইজ ডিউটি আলাদাভাবে কাটা হয়, তাই চূড়ান্ত অঙ্ক ব্যাংকের কাছ থেকে নিশ্চিত হয়ে নিন।</p>
+</section>
+
+<section class="page" id="p-dates">
+  <h1>তারিখের ব্যবধান</h1>
+  <p class="lead">দুই তারিখের মাঝে কত দিন, মাস ও বছর আছে দেখুন।</p>
+  <div class="row"><div><label for="da">শুরুর তারিখ</label><input type="date" id="da"></div>
+  <div><label for="db">শেষ তারিখ</label><input type="date" id="db"></div></div>
+  <button id="dtBtn">ব্যবধান বের করুন</button>
+  <div class="res" id="dtRes" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool8"></div>
+  <p>চাকরির মেয়াদ, ঋণের সময়, ভিসার বাকি দিন বা কোনো অনুষ্ঠানের কাউন্টডাউন জানতে এটি কাজে লাগে।</p>
+</section>
+
+<section class="page" id="p-unit">
+  <h1>ইউনিট কনভার্টার</h1>
+  <p class="lead">দৈর্ঘ্য, ওজন ও তাপমাত্রা এক ইউনিট থেকে অন্য ইউনিটে বদলান।</p>
+  <label for="uc">কী বদলাবেন</label>
+  <select id="uc"><option value="len">দৈর্ঘ্য</option><option value="wt">ওজন</option><option value="tp">তাপমাত্রা</option></select>
+  <label for="uv">মান</label><input type="number" id="uv" step="any">
+  <div class="row"><div><label for="uf">থেকে</label><select id="uf"></select></div>
+  <div><label for="ut">এতে</label><select id="ut"></select></div></div>
+  <button id="uBtn">রূপান্তর করুন</button>
+  <div class="res" id="uRes" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool9"></div>
+  <p>এক মণ প্রায় ৩৭.৩২ কেজি এবং এক সের প্রায় ০.৯৩ কেজি ধরা হয়েছে।</p>
+</section>
+
+<section class="page" id="p-pass">
+  <h1>পাসওয়ার্ড জেনারেটর</h1>
+  <p class="lead">শক্তিশালী র‍্যান্ডম পাসওয়ার্ড তৈরি করুন। এটি শুধু আপনার ব্রাউজারে তৈরি হয়।</p>
+  <label for="pl">দৈর্ঘ্য: <span class="num" id="plv">16</span></label>
+  <input type="range" id="pl" min="8" max="40" value="16">
+  <label><input type="checkbox" id="psym" checked style="width:auto"> বিশেষ চিহ্ন (!@#) থাকবে</label>
+  <button id="pBtn">নতুন পাসওয়ার্ড</button> <button id="pCopy">কপি করুন</button>
+  <div class="res" id="pRes" aria-live="polite" hidden></div>
+  <div class="ad" id="ad-tool10"></div>
+  <p>পাসওয়ার্ড ছোট না রেখে কমপক্ষে ১২ অক্ষরের রাখুন, আর প্রতিটি অ্যাকাউন্টে আলাদা পাসওয়ার্ড ব্যবহার করুন।</p>
+</section>
+
+<section class="page" id="p-guide">
+  <h1>কাজের গাইড</h1>
+  <p class="lead">টাকা, স্বাস্থ্য ও অনলাইন নিয়ে সহজ কিছু লেখা।</p>
+  <h2>ঋণ নেওয়ার আগে ৫টি বিষয় দেখুন</h2>
+  <p>প্রথমে শুধু সুদের হার নয়, মোট খরচ দেখুন। প্রসেসিং ফি, বীমা ও আগাম পরিশোধের জরিমানা আলাদা করে জেনে নিন। দ্বিতীয়ত, মাসিক কিস্তি আপনার আয়ের এক-তৃতীয়াংশের বেশি হওয়া ঠিক নয়। তৃতীয়ত, <a href="#emi">EMI ক্যালকুলেটরে</a> বিভিন্ন মেয়াদ দিয়ে তুলনা করুন; মেয়াদ বাড়লে কিস্তি কমে, কিন্তু মোট সুদ বাড়ে। চতুর্থত, চুক্তির কাগজ পুরো পড়ুন। পঞ্চমত, জরুরি তহবিল হাতে রেখে তবেই ঋণ নিন।</p>
+  <div class="dl dl-wide" hidden><a class="dl-box" href="#" target="_blank" rel="sponsored noopener">স্পনসর্ড অফার দেখুন<small>বিজ্ঞাপন</small></a></div>
+  <!-- AD SLOT: গাইডের ভেতরে native ad -->
+  <div class="ad" id="ad-guide"></div>
+  <h2>স্বাভাবিক ওজন ধরে রাখার সহজ নিয়ম</h2>
+  <p>নিয়মিত হাঁটা, পর্যাপ্ত ঘুম আর ভাজাপোড়া ও মিষ্টি কম খাওয়া শুরু করার ভালো উপায়। আপনার <a href="#bmi">BMI</a> দেখে নিয়ে ধীরে ধীরে লক্ষ্য ঠিক করুন। হঠাৎ ডায়েট বা অতিরিক্ত ব্যায়াম না করে ছোট ছোট অভ্যাস বদলান। কোনো রোগ থাকলে বা গর্ভবতী হলে আগে চিকিৎসকের সাথে কথা বলুন।</p>
+  <h2>লেখার শব্দসীমা মেনে চলার কৌশল</h2>
+  <p>আবেদন, প্রবন্ধ বা পোস্টে শব্দসীমা থাকলে আগে খসড়া লিখুন, তারপর <a href="#words">ওয়ার্ড কাউন্টারে</a> গুনে অপ্রয়োজনীয় বাক্য ছাঁটুন। একই কথা দুবার বললে একটি বাদ দিন এবং লম্বা বাক্য ভেঙে ছোট করুন।</p>
+</section>
+
+<section class="page" id="p-about">
+  <h1>আমাদের সম্পর্কে</h1>
+  <p>ToolBox BD একটি বিনামূল্যে অনলাইন টুলস ওয়েবসাইট। আমাদের লক্ষ্য বাংলাভাষীদের জন্য সহজ ও দ্রুত টুল দেওয়া। সাইট চালানোর খরচ মেটাতে আমরা বিজ্ঞাপন দেখাই।</p>
+  <h2>যোগাযোগ</h2>
+  <p>ইমেইল: <strong>your-email@example.com</strong> (এখানে আপনার আসল ইমেইল বসান)</p>
+</section>
+
+<section class="page" id="p-privacy">
+  <h1>গোপনীয়তা নীতি</h1>
+  <p>এই সাইটের টুলগুলোতে আপনি যা লেখেন বা দেন, তা শুধু আপনার ব্রাউজারে প্রসেস হয়; আমরা সেগুলো সার্ভারে জমা রাখি না।</p>
+  <p>আমরা তৃতীয় পক্ষের বিজ্ঞাপন নেটওয়ার্ক (যেমন Adsterra ও Monetag) ব্যবহার করি। তারা বিজ্ঞাপন দেখানোর জন্য কুকি বা অনুরূপ প্রযুক্তি ব্যবহার করতে পারে। বিস্তারিত জানতে তাদের নিজস্ব গোপনীয়তা নীতি দেখুন। আপনি ব্রাউজার সেটিংস থেকে কুকি বন্ধ করতে পারেন।</p>
+  <p>এই নীতি যেকোনো সময় আপডেট হতে পারে।</p>
+</section>
+
+</main>
+
+<aside>
+  <!-- DIRECT LINK: নিচের স্ক্রিপ্টে DIRECT_LINK-এ আপনার Monetag Direct Link বসান -->
+  <div class="box dl" hidden><a class="dl-box" href="#" target="_blank" rel="sponsored noopener">স্পনসর্ড অফার দেখুন<small>বিজ্ঞাপন</small></a></div>
+  <!-- AD SLOT 3: সাইডবার (300x250) -->
+  <div class="box"><div class="ad" id="ad-side"></div></div>
+  <div class="box"><strong>জনপ্রিয় টুলস</strong><br><a href="#age">বয়স ক্যালকুলেটর</a><br><a href="#words">ওয়ার্ড কাউন্টার</a><br><a href="#percent">শতকরা হিসাব</a><br><a href="#emi">EMI ক্যালকুলেটর</a><br><a href="#bmi">BMI ক্যালকুলেটর</a><br><a href="#discount">ছাড় ক্যালকুলেটর</a><br><a href="#fd">সঞ্চয় হিসাব</a><br><a href="#unit">ইউনিট কনভার্টার</a><br><a href="#guide">কাজের গাইড</a></div>
+</aside>
+</div>
+</div>
+
+<footer>
+  <a href="#about">আমাদের সম্পর্কে</a><a href="#privacy">গোপনীয়তা নীতি</a>
+  <p>© <span id="yr"></span> ToolBox BD</p>
+</footer>
+
+<!-- AD SLOT 4: Monetag Social Bar / Push / Adsterra Social Bar স্ক্রিপ্ট এখানে (</body>-এর আগে) বসান -->
+
+<script>
+// ===== এখানে আপনার Monetag Direct Link বসান (উদ্ধৃতি চিহ্নের ভেতরে) =====
+const DIRECT_LINK='https://uplcm.com/4/12324731';
+document.querySelectorAll('.dl').forEach(el=>{
+  if(!DIRECT_LINK)return;
+  const a=el.tagName==='A'?el:el.querySelector('a');
+  a.href=DIRECT_LINK;el.hidden=false;
+});
+const pages=['home','age','words','percent','emi','bmi','discount','fd','dates','unit','pass','guide','about','privacy'];
+function route(){
+  let h=(location.hash||'#home').slice(1); if(!pages.includes(h)) h='home';
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('show',p.id==='p-'+h));
+  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));
+  window.scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
+const fmt=n=>bn((Math.round(n*100)/100).toString());
+
+document.getElementById('ageBtn').onclick=()=>{
+  const v=document.getElementById('dob').value,out=document.getElementById('ageRes');
+  out.hidden=false;
+  if(!v){out.textContent='জন্মতারিখ বাছাই করুন।';return}
+  const b=new Date(v),t=new Date();
+  if(b>t){out.textContent='জন্মতারিখ ভবিষ্যতের হতে পারে না।';return}
+  let y=t.getFullYear()-b.getFullYear(),m=t.getMonth()-b.getMonth(),d=t.getDate()-b.getDate();
+  if(d<0){m--;d+=new Date(t.getFullYear(),t.getMonth(),0).getDate()}
+  if(m<0){y--;m+=12}
+  let nx=new Date(t.getFullYear(),b.getMonth(),b.getDate());
+  if(nx<new Date(t.getFullYear(),t.getMonth(),t.getDate())) nx.setFullYear(t.getFullYear()+1);
+  const left=Math.ceil((nx-t)/864e5);
+  out.innerHTML='আপনার বয়স <b>'+bn(y)+' বছর '+bn(m)+' মাস '+bn(d)+' দিন</b>।<br>পরবর্তী জন্মদিনের বাকি: '+bn(left)+' দিন।';
+};
+
+const txt=document.getElementById('txt');
+txt.oninput=()=>{
+  const s=txt.value;
+  const w=s.trim()?s.trim().split(/\s+/).length:0;
+  const sen=s.split(/[।.!?]+/).filter(x=>x.trim()).length;
+  const par=s.split(/\n+/).filter(x=>x.trim()).length;
+  cW.textContent=bn(w);cC.textContent=bn(s.length);cS.textContent=bn(sen);cP.textContent=bn(par);
+};
+
+document.getElementById('b1').onclick=()=>{
+  const p=parseFloat(a1.value),n=parseFloat(a2.value),o=r1;o.hidden=false;
+  o.textContent=(isNaN(p)||isNaN(n))?'দুটি সংখ্যাই দিন।':fmt(n)+'-এর '+fmt(p)+'% = '+fmt(n*p/100);
+};
+document.getElementById('b2').onclick=()=>{
+  const a=parseFloat(c1.value),b=parseFloat(c2.value),o=r2;o.hidden=false;
+  if(isNaN(a)||isNaN(b)){o.textContent='দুটি সংখ্যাই দিন।';return}
+  if(a===0){o.textContent='আগের মান শূন্য হলে হার বের করা যায় না।';return}
+  const r=(b-a)/Math.abs(a)*100;
+  o.textContent=(r>=0?'বৃদ্ধি: ':'হ্রাস: ')+fmt(Math.abs(r))+'%';
+};
+
+document.getElementById('eBtn').onclick=()=>{
+  const P=parseFloat(e1.value),R=parseFloat(e2.value),n=parseInt(e3.value),o=eRes;o.hidden=false;
+  if(!(P>0)||!(R>=0)||!(n>0)){o.textContent='সব ঘর সঠিকভাবে পূরণ করুন।';return}
+  const r=R/1200;
+  const emi=r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  const tot=emi*n;
+  o.innerHTML='মাসিক কিস্তি: <b>'+fmt(emi)+' টাকা</b><br>মোট পরিশোধ: '+fmt(tot)+' টাকা<br>মোট সুদ: '+fmt(tot-P)+' টাকা';
+};
+document.getElementById('bmiBtn').onclick=()=>{
+  const hh=parseFloat(h.value)/100,ww=parseFloat(w.value),o=bmiRes;o.hidden=false;
+  if(!(hh>0)||!(ww>0)){o.textContent='উচ্চতা ও ওজন সঠিকভাবে দিন।';return}
+  const b=ww/(hh*hh);
+  const c=b<18.5?'কম ওজন':b<25?'স্বাভাবিক':b<30?'অতিরিক্ত ওজন':'স্থূলতা';
+  o.innerHTML='আপনার BMI: <b>'+fmt(b)+'</b> ('+c+')';
+};
+document.getElementById('dBtn').onclick=()=>{
+  const p=parseFloat(dpr.value),c=parseFloat(dpc.value),o=dRes;o.hidden=false;
+  if(!(p>=0)||!(c>=0&&c<=100)){o.textContent='সঠিক দাম ও ০ থেকে ১০০-এর মধ্যে ছাড় দিন।';return}
+  const sv=p*c/100;
+  o.innerHTML='ছাড়ের পর দাম: <b>'+fmt(p-sv)+' টাকা</b><br>আপনি বাঁচাবেন: '+fmt(sv)+' টাকা';
+};
+document.getElementById('fBtn').onclick=()=>{
+  const P=parseFloat(fp.value),R=parseFloat(fr.value),Y=parseFloat(fy.value),n=parseInt(fc.value),o=fRes;o.hidden=false;
+  if(!(P>0)||!(R>=0)||!(Y>0)){o.textContent='সব ঘর সঠিকভাবে পূরণ করুন।';return}
+  const A=P*Math.pow(1+R/100/n,n*Y);
+  o.innerHTML='মেয়াদ শেষে পাবেন: <b>'+fmt(A)+' টাকা</b><br>শুধু সুদ: '+fmt(A-P)+' টাকা';
+};
+document.getElementById('dtBtn').onclick=()=>{
+  const o=dtRes;o.hidden=false;
+  if(!da.value||!db.value){o.textContent='দুটি তারিখই বাছাই করুন।';return}
+  let a=new Date(da.value),b=new Date(db.value),sg='';
+  if(b<a){[a,b]=[b,a];sg=' (তারিখ দুটি উল্টে ধরা হয়েছে)'}
+  const days=Math.round((b-a)/864e5);
+  let y=b.getFullYear()-a.getFullYear(),m=b.getMonth()-a.getMonth(),d=b.getDate()-a.getDate();
+  if(d<0){m--;d+=new Date(b.getFullYear(),b.getMonth(),0).getDate()}
+  if(m<0){y--;m+=12}
+  o.innerHTML='মোট <b>'+bn(days)+' দিন</b>'+sg+'<br>অর্থাৎ '+bn(y)+' বছর '+bn(m)+' মাস '+bn(d)+' দিন';
+};
+const U={len:{'মিটার':1,'কিলোমিটার':1000,'সেন্টিমিটার':.01,'ইঞ্চি':.0254,'ফুট':.3048,'গজ':.9144,'মাইল':1609.344},
+ wt:{'কেজি':1,'গ্রাম':.001,'পাউন্ড':.45359237,'আউন্স':.028349523,'সের':.9331,'মণ':37.3242,'টন':1000},
+ tp:{'সেলসিয়াস':1,'ফারেনহাইট':1,'কেলভিন':1}};
+function fillU(){
+  const k=uc.value,names=Object.keys(U[k]);
+  uf.innerHTML=ut.innerHTML=names.map(n=>'<option>'+n+'</option>').join('');
+  ut.selectedIndex=1;
+}
+uc.onchange=fillU;fillU();
+document.getElementById('uBtn').onclick=()=>{
+  const v=parseFloat(uv.value),o=uRes,k=uc.value,f=uf.value,t=ut.value;o.hidden=false;
+  if(isNaN(v)){o.textContent='একটি সংখ্যা দিন।';return}
+  let r;
+  if(k==='tp'){
+    let c=f==='সেলসিয়াস'?v:f==='ফারেনহাইট'?(v-32)*5/9:v-273.15;
+    r=t==='সেলসিয়াস'?c:t==='ফারেনহাইট'?c*9/5+32:c+273.15;
+  }else r=v*U[k][f]/U[k][t];
+  o.innerHTML=fmt(v)+' '+f+' = <b>'+fmt(r)+' '+t+'</b>';
+};
+pl.oninput=()=>plv.textContent=bn(pl.value);
+function genPass(){
+  const set='abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'+(psym.checked?'!@#$%&*?':'');
+  const a=new Uint32Array(+pl.value);crypto.getRandomValues(a);
+  pRes.hidden=false;pRes.innerHTML='<b style="word-break:break-all">'+[...a].map(x=>set[x%set.length]).join('')+'</b>';
+}
+document.getElementById('pBtn').onclick=genPass;
+document.getElementById('pCopy').onclick=()=>{
+  if(pRes.hidden)genPass();
+  const t=pRes.textContent;
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{pCopy.textContent='কপি হয়েছে'},()=>{pCopy.textContent='কপি করা যায়নি'});
+  setTimeout(()=>pCopy.textContent='কপি করুন',1800);
+};
+</script>
+</body>
+</html>
